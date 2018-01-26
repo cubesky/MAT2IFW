@@ -5,7 +5,12 @@
 
 from functools import reduce
 import re
-import os.path
+import os
+
+try:
+    os.mkdir('ifw')
+except:
+    pass
 
 def addComp(prefix,str): return "<"+prefix+" block=\"true\" log=\"false\">\n" + str + "\n</" + prefix + ">"
 mat = []
