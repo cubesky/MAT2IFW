@@ -5,6 +5,7 @@
 
 from functools import reduce
 import re
+import os.path
 
 def addComp(prefix,str): return "<"+prefix+" block=\"true\" log=\"false\">\n" + str + "\n</" + prefix + ">"
 mat = []
@@ -31,6 +32,7 @@ for i in newAppName:
 
    result = "<rules>\n" + addComp("service",matR) + "\n" + addComp("broadcast",matR) + "\n" + addComp("activity",matR) + "\n</rules>"
 
-   fo = open(i+".xml", "w")
+   outputPath = os.path.join("./ifw", i+".xml")
+   fo = open(outputPath, "w")
    fo.write(result)
    fo.close()
