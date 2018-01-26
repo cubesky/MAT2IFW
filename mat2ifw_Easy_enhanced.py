@@ -25,10 +25,11 @@ for line in open("mat.txt"):
    mat.append("    <component-filter name=\"" + line.replace("\n","") + "\" />")
 
 for i in newAppName:
+   ii = i.replace("\n","/")
    i = i.replace("\n","")
    newMat = []
    for j in mat:
-      if str(i) in str(j):
+      if str(ii) in str(j):
          newMat.append(j)
       else:
          continue
