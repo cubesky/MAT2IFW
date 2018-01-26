@@ -22,7 +22,7 @@ for i in open("mat.txt"):
 newAppName = list(set(appName))
 
 for line in open("mat.txt"):
-   mat.append("    <component-filter name=\"" + line.replace("\n","") + "\" />")
+   mat.append("<component-filter name=\"" + line.replace("\n","") + "\" />")
 
 for i in newAppName:
    ii = i.replace("\n","/")
