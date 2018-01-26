@@ -1,8 +1,10 @@
 IFW 是什么？[https://cn.apkjam.com/blog/ifw.html](https://cn.apkjam.com/blog/ifw.html)
 
----
-
 :bookmark: 执行脚本之前需要先准备好「[写轮眼](https://cn.apkjam.com/mat.html)」的配置文件（格式示例 [https://github.com/apkjam/MAT-backup](https://github.com/apkjam/MAT-backup)）并将其命名为 `mat.txt`，然后放置到下列脚本执行时的相同路径下。
+
+> 这里附带的 `mat.txt` 仅供参考。
+
+---
 
 `mat2ifw_Auto.py` 会按照 [@蠢黑通行 的方法](https://blackyau.cc/8.html)识别并分类生成 IFW：
 
