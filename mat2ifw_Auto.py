@@ -37,7 +37,7 @@ if len(matUnknown) > 0:
 else:
     ifwUnknownText = ""
 
-result = "<rules>\n" + ifwServiceText + "\n" + ifwRecieverText + "\n" + ifwActivityText + "\n\n" + ifwUnknownText
+result = "<rules>\n" + ifwServiceText + "\n" + ifwRecieverText + "\n" + ifwActivityText + "\n\n" + ifwUnknownText + "\n\n</rules>"
 print(result)
 fo = open("ifw.xml", "w")
 fo.write(result)
