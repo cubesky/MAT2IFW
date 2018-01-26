@@ -6,4 +6,6 @@
 
 > 先在两边加上前缀和后缀，后将整个 MAT 方案复制两遍然后在将 IFW 用于判定 `broadcast`、`service`、`activity` 属性的语句，重复三遍。
 
+`mat2ifw_Easy.py` 的在线版：[https://apkjam.github.io/IFW/mat2ifw.html](https://apkjam.github.io/IFW/mat2ifw.html)
+
 （via [link](https://bbs.letitfly.me/d/100)）
