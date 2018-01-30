@@ -18,30 +18,32 @@ array=($a)
 function ct(){
 temfile=$1
 
-echo "<rules>" >> $temfile
-echo " <broadcast block="true" log="false">" >> $temfile
-echo " </broadcast>" >> $temfile
-echo " <service block="true" log="false">" >> $temfile
-echo " </service>" >> $temfile
-echo " <activity block="true" log="false">" >> $temfile
-echo " </activity>" >> $temfile
-echo "</rules>" >> $temfile
+echo "<rules> \
+
+	 <broadcast block=\"true\" log=\"false\"> \
+
+	  </broadcast> \
+
+	   <service block=\"true\" log=\"false\"> \
+
+	    </service> \
+
+	     <activity block=\"true\" log=\"false\"> \
+
+	      </activity> \
+
+	      </rules>" > $temfile
 }
 
 for i in ${a[*]}; do
 
-file1="$i.tp1"
+file1="$i.xml"
 file2="$i.tp2"
-file="$i.xml"
-ct $file1
-cat $filename | grep $i >> $file2
+ct ./ifw/$file1
 
-sed -i 's/^/  <component-filter name="&/g' $file2
-sed -i 's/$/&" \/>/g' $file2
+cat $filename | grep $i | sed '/./{s/^/  <component-filter name="&/g;s/$/&\"\ \/>/g}' > $file2
+echo $file2 | sed -i "/log/r $file2" ./ifw/$file1
 
-echo $file2 | sed -i "/log/r $file2" $file1
-
-mv $file1 ./ifw/$file
 
 rm -rf $file2
 
