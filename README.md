@@ -17,3 +17,5 @@ IFW 是什么？[https://cn.apkjam.com/blog/ifw.html](https://cn.apkjam.com/blog
 `mat2ifw_Easy.py` 的在线版：[https://apkjam.github.io/IFW/mat2ifw.html](https://apkjam.github.io/IFW/mat2ifw.html)
 
 `mat2ifw_Easy_enhanced.py` 为 `mat2ifw_Easy.py` 的增强版本，可以根据按照 App 的 `Application ID`(`Android Package Name`)<sup>[link](https://developer.android.com/studio/build/application-id.html)</sup> 命名各自的规则。 
+
+`mat2ifw_Easy_enhanced.sh` 为 `mat2ifw_Easy.py` 增强版本的 Linux Shell 实现。
